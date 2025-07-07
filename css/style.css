@@ -48,11 +48,12 @@ header p {
 /* Navigation */
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end; /* aligns menu to right */
   background-color: #4a7c59;
   flex-wrap: wrap;
   align-items: center;
   gap: 12px;
+  padding-right: 40px; /* adjust as needed */
 }
 
 nav a,
