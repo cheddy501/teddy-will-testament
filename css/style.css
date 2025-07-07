@@ -180,10 +180,10 @@ nav a:hover,
 .cta-button {
   background-color: #2a6f63;
   color: #d9f0e1;
-  padding: 14px 28px;        /* Slightly bigger button */
+  padding: 10px 20px;        /* Slightly bigger button */
   text-decoration: none;
   font-weight: bold;
-  border-radius: 6px;
+  border-radius: 5px;
   transition: background-color 0.3s ease;
   display: inline-block;     /* Makes button size shrink to content */
 }
