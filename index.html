@@ -6,36 +6,34 @@
 <title>Index | C&J Estate Planning</title>
 <link rel="stylesheet" href="css/style.css" />
 <style>
-/* Hero Banner Styling */
 .hero-banner {
+  position: relative;
   width: 100%;
   height: 60vh;
   background: url('images/grandparents-sunset-banner.png') center center/cover no-repeat;
-}
-
-/* Remove overlay */
-.hero-banner::after {
-  content: none;
-}
-
-/* Text content container under banner */
-.hero-text {
-  max-width: 700px;
-  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+}
+
+.hero-banner::after {
+  content: none; /* No overlay */
+}
+
+.hero-content {
+  position: relative;
+  color: #fff;
+  max-width: 90%;
   padding: 0 20px;
-  color: #3a4a3f; /* Darker text */
-}
-
-.hero-text h2 {
+  z-index: 1;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-weight: 700;
   font-size: 2.4em;
-  margin-bottom: 15px;
-}
-
-.hero-text p {
-  font-size: 1.3em;
-  margin-bottom: 25px;
-  line-height: 1.5;
 }
 
 .cta-button {
@@ -53,7 +51,18 @@
   background-color: #76b39d;
 }
 
-/* Container for welcome section */
+/* Paragraph below the image */
+.hero-text {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 0 20px;
+  text-align: center;
+  color: #3a4a3f;
+  font-size: 1.3em;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
 .container {
   max-width: 900px;
   background: #ffffff;
@@ -74,15 +83,15 @@
   margin-bottom: 15px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .hero-banner {
     height: 40vh;
   }
-  .hero-text h2 {
+  .hero-content {
     font-size: 1.8em;
+    gap: 15px;
   }
-  .hero-text p {
+  .hero-text {
     font-size: 1.1em;
   }
 }
@@ -114,14 +123,17 @@
   <a href="faq.html">FAQ</a>
 </nav>
 
-<!-- Hero Banner only image -->
-<section class="hero-banner"></section>
+<!-- Hero Banner with heading + button centered -->
+<section class="hero-banner">
+  <div class="hero-content">
+    Securing Your Legacy for Generations
+    <a href="contact.html" class="cta-button">Book a Free Consultation</a>
+  </div>
+</section>
 
-<!-- Text content below the banner -->
+<!-- Paragraph below the image -->
 <div class="hero-text">
-  <h2>Securing Your Legacy for Generations</h2>
   <p>Estate planning that protects your family, your wishes, and your peace of mind.</p>
-  <a href="contact.html" class="cta-button">Book a Free Consultation</a>
 </div>
 
 <!-- Main content container -->
@@ -138,3 +150,4 @@
 </footer>
 </body>
 </html>
+
