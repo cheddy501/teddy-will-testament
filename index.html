@@ -6,7 +6,7 @@
 <title>Index | C&J Estate Planning</title>
 <link rel="stylesheet" href="css/style.css" />
 <style>
-/* Banner hero styling */
+/* Hero Banner Styling */
 .hero-banner {
   position: relative;
   width: 100%;
@@ -22,7 +22,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* dark overlay for readability */
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .hero-content {
@@ -39,7 +39,24 @@
 .hero-content p {
   font-size: 1.2em;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
+}
+
+.hero-content .cta-button {
+  background-color: #76b39d;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-content .cta-button:hover {
+  background-color: #5a927f;
 }
 
 @media (max-width: 768px) {
@@ -81,11 +98,12 @@
   <a href="faq.html">FAQ</a>
 </nav>
 
-<!-- Hero Banner Section -->
+<!-- Hero Banner Section with CTA -->
 <section class="hero-banner">
   <div class="hero-content">
     <h2>Securing Your Legacy for Generations</h2>
     <p>Estate planning that protects your family, your wishes, and your peace of mind.</p>
+    <a href="contact.html" class="cta-button">Book a Free Consultation</a>
   </div>
 </section>
 
