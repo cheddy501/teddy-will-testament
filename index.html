@@ -5,6 +5,55 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Index | C&J Estate Planning</title>
 <link rel="stylesheet" href="css/style.css" />
+<style>
+/* Banner hero styling */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background: url('images/grandparents-sunset-banner.png') center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay for readability */
+}
+
+.hero-content {
+  position: relative;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.hero-content h2 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 40vh;
+  }
+  .hero-content h2 {
+    font-size: 1.5em;
+  }
+  .hero-content p {
+    font-size: 1em;
+  }
+}
+</style>
 </head>
 <body>
 <header>
@@ -31,6 +80,15 @@
   <a href="contact.html">Contact</a>
   <a href="faq.html">FAQ</a>
 </nav>
+
+<!-- Hero Banner Section -->
+<section class="hero-banner">
+  <div class="hero-content">
+    <h2>Securing Your Legacy for Generations</h2>
+    <p>Estate planning that protects your family, your wishes, and your peace of mind.</p>
+  </div>
+</section>
+
 <div class="container">
   <h2>Welcome to C&J Estate Planning</h2>
   <p>Your trusted partner for Will & Estate Planning services in Belize and beyond.</p>
