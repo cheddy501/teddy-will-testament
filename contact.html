@@ -28,19 +28,35 @@
   <a href="contact.html">Contact</a>
   <a href="faq.html">FAQ</a>
 </nav>
+
 <div class="container">
   <h2>Contact Us</h2>
-  <p>Please reach out to us for consultations or questions regarding your estate planning needs.</p>
-  <form action="https://formspree.io/f/mwkdjvgd" method="POST">
+  <p>Please reach out for consultations or questions regarding your estate planning needs.</p>
+  <form action="contact.php" method="POST">
     <label for="name">Name:</label><br>
     <input type="text" id="name" name="name" required><br><br>
+
     <label for="email">Email:</label><br>
-    <input type="email" id="email" name="_replyto" required><br><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="matter">Type of Matter:</label><br>
+    <select id="matter" name="matter" required>
+      <option value="">-- Please Select --</option>
+      <option value="Last Will & Testament Preparation">Last Will & Testament Preparation</option>
+      <option value="Grant of Administration Preparation">Grant of Administration Preparation</option>
+      <option value="Grant of Probate Preparation">Grant of Probate Preparation</option>
+      <option value="POA for Financial & Legal Matters">POA for Financial & Legal Matters</option>
+      <option value="POA for Healthcare & Personal Care">POA for Healthcare & Personal Care</option>
+      <option value="Trusts">Trusts</option>
+    </select><br><br>
+
     <label for="message">Message:</label><br>
     <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
     <button type="submit">Send Message</button>
   </form>
 </div>
+
 <footer>
   &copy; 2025 C&J Estate Planning Consultancy. All rights reserved.
 </footer>
