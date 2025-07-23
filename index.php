@@ -1,11 +1,15 @@
+<?php
+// index.php
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Index | C&J Estate Planning</title>
 <link rel="stylesheet" href="css/style.css" />
 <style>
+/* Your existing styles */
 .hero-banner {
   position: relative;
   width: 100%;
@@ -16,11 +20,9 @@
   justify-content: center;
   text-align: center;
 }
-
 .hero-banner::after {
   content: none; /* No overlay */
 }
-
 .hero-content {
   position: relative;
   color: #fff;
@@ -35,7 +37,6 @@
   font-weight: 700;
   font-size: 2.4em;
 }
-
 .cta-button {
   background-color: #2a6f63;
   color: #d9f0e1;
@@ -46,11 +47,9 @@
   transition: background-color 0.3s ease;
   display: inline-block;
 }
-
 .cta-button:hover {
   background-color: #76b39d;
 }
-
 .hero-text {
   max-width: 700px;
   margin: 30px auto;
@@ -61,7 +60,6 @@
   line-height: 1.5;
   font-weight: normal;
 }
-
 .container {
   max-width: 900px;
   background: #ffffff;
@@ -71,17 +69,14 @@
   box-shadow: 0 0 12px rgba(58,74,63,0.15);
   color: #3a4a3f;
 }
-
 .container h2 {
   margin-bottom: 15px;
   color: #2a6f63;
 }
-
 .container p {
   font-size: 1.1em;
   margin-bottom: 15px;
 }
-
 @media (max-width: 768px) {
   .hero-banner {
     height: 40vh;
@@ -94,53 +89,27 @@
     font-size: 1.1em;
   }
 }
-
 /* Updated Logo Styling */
 .logo {
-  height: 160px; /* doubled from 80px */
-  width: 160px; /* maintain circular shape */
-  border-radius: 50%; /* circular */
-  object-fit: cover; /* ensures logo fills the circular area cleanly */
-  background-color: transparent; /* ensures no white block if image has transparency */
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: transparent;
   display: block;
-  margin: 0 auto; /* center if needed */
+  margin: 0 auto;
 }
 </style>
 </head>
 <body>
-<header style="text-align: center; padding: 20px 0;">
-  <a href="index.html">
-    <img src="images/logo2.png" alt="C&J Estate Planning Logo" class="logo" />
-  </a>
-  <div>
-    <h1>C&J Estate Planning Consultancy</h1>
-    <p>Trustworthy Will & Estate Planning Services</p>
-  </div>
-</header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <div class="dropdown">
-    <a href="#">Services</a>
-    <div class="dropdown-content">
-      <a href="will-preparation.html">Last Will & Testament Preparation</a>
-      <a href="administration-preparation.html">Grant of Administration Preparation</a>
-      <a href="probate-preparation.html">Grant of Probate Preparation</a>
-      <a href="poa-financial.html">POA for Financial & Legal Matters</a>
-      <a href="poa-healthcare.html">POA for Healthcare & Personal Care</a>
-      <a href="trusts.html">Trusts</a>
-    </div>
-  </div>
-  <a href="contact.html">Contact</a>
-  <a href="faq.html">FAQ</a>
-</nav>
+<?php include 'header.php'; ?>
 
 <!-- Hero Banner with heading + button centered -->
 <section class="hero-banner">
   <div class="hero-content">
     Securing Your Legacy for Generations
-    <a href="contact.html" class="cta-button">Book a Free Consultation</a>
+    <a href="contact.php" class="cta-button">Book a Free Consultation</a>
   </div>
 </section>
 
@@ -161,5 +130,6 @@
 <footer>
   &copy; 2025 C&J Estate Planning Consultancy. All rights reserved.
 </footer>
+
 </body>
 </html>
