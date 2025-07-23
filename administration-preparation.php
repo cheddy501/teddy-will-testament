@@ -11,7 +11,20 @@
 </head>
 <body>
 
-<?php include 'header.php'; ?>
+<!-- Replace this with your actual header content from header.php -->
+<header>
+  <div class="logo-container">
+    <img src="images/logo.png" alt="C&J Estate Planning Logo" class="logo" />
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html" aria-current="page">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
 <div class="container">
   <h2>Grant of Administration Preparation</h2>
