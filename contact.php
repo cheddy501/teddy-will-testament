@@ -1,41 +1,3 @@
-<?php
-// Process form submission
-$success = "";
-$error = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "libbelmopan@yahoo.com";
-    $subject = "New Contact Form Submission - C&J Estate Planning";
-
-    // Sanitize inputs
-    $name = strip_tags(trim($_POST["name"] ?? ""));
-    $email = filter_var(trim($_POST["email"] ?? ""), FILTER_SANITIZE_EMAIL);
-    $matter = strip_tags(trim($_POST["matter"] ?? ""));
-    $message = strip_tags(trim($_POST["message"] ?? ""));
-
-    // Validate email and required fields
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $error = "Invalid email address.";
-    } elseif (empty($name) || empty($matter) || empty($message)) {
-        $error = "Please fill in all required fields.";
-    } else {
-        $email_content = "Name: $name\n";
-        $email_content .= "Email: $email\n";
-        $email_content .= "Type of Matter: $matter\n\n";
-        $email_content .= "Message:\n$message\n";
-
-        $headers = "From: $name <$email>\r\n";
-        $headers .= "Reply-To: $email\r\n";
-
-        if (mail($to, $subject, $email_content, $headers)) {
-            $success = "Thank you for contacting us, $name. We will get back to you shortly.";
-        } else {
-            $error = "Sorry, your message could not be sent. Please try again later.";
-        }
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,41 +5,133 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Contact | C&J Estate Planning</title>
 <link rel="stylesheet" href="css/style.css" />
+<style>
+  /* Basic styles for the form and page */
+  body {
+    font-family: Arial, sans-serif;
+    background: #f7f9f8;
+    color: #3a4a3f;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background: #e6f2f1;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .logo {
+    height: 120px;
+    border-radius: 50%;
+  }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: #3a4a3f;
+    font-weight: bold;
+  }
+  nav ul li a[aria-current="page"] {
+    text-decoration: underline;
+  }
+  .container {
+    max-width: 600px;
+    background: white;
+    margin: 40px auto;
+    padding: 30px 20px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+  }
+  h2 {
+    margin-bottom: 15px;
+  }
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  textarea {
+    resize: vertical;
+  }
+  button {
+    margin-top: 20px;
+    background-color: #3a4a3f;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #2f3b33;
+  }
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #e6f2f1;
+    margin-top: 50px;
+    font-size: 0.9rem;
+  }
+</style>
 </head>
 <body>
 
-<?php include 'header.php'; ?>
+<header>
+  <img src="images/logo.png" alt="C&J Estate Planning Logo" class="logo" />
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
 <div class="container">
   <h2>Contact Us</h2>
   <p>Please reach out for consultations or questions regarding your estate planning needs.</p>
 
-  <?php if ($success): ?>
-    <p style="color: green;"><?php echo htmlspecialchars($success); ?></p>
-  <?php elseif ($error): ?>
-    <p style="color: red;"><?php echo htmlspecialchars($error); ?></p>
-  <?php endif; ?>
+  <!-- Replace the action URL below with your form handler URL or third-party service -->
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <label for="name">Name<span aria-hidden="true">*</span>:</label>
+    <input type="text" id="name" name="name" required autocomplete="name" />
 
-  <form action="contact.php" method="POST">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" required value="<?php echo htmlspecialchars($_POST['name'] ?? '') ?>"><br><br>
+    <label for="email">Email<span aria-hidden="true">*</span>:</label>
+    <input type="email" id="email" name="_replyto" required autocomplete="email" />
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required value="<?php echo htmlspecialchars($_POST['email'] ?? '') ?>"><br><br>
-
-    <label for="matter">Type of Matter:</label><br>
+    <label for="matter">Type of Matter<span aria-hidden="true">*</span>:</label>
     <select id="matter" name="matter" required>
-      <option value="">-- Please Select --</option>
-      <option value="Last Will & Testament Preparation" <?php if (($_POST['matter'] ?? '') === "Last Will & Testament Preparation") echo 'selected'; ?>>Last Will & Testament Preparation</option>
-      <option value="Grant of Administration Preparation" <?php if (($_POST['matter'] ?? '') === "Grant of Administration Preparation") echo 'selected'; ?>>Grant of Administration Preparation</option>
-      <option value="Grant of Probate Preparation" <?php if (($_POST['matter'] ?? '') === "Grant of Probate Preparation") echo 'selected'; ?>>Grant of Probate Preparation</option>
-      <option value="POA for Financial & Legal Matters" <?php if (($_POST['matter'] ?? '') === "POA for Financial & Legal Matters") echo 'selected'; ?>>POA for Financial & Legal Matters</option>
-      <option value="POA for Healthcare & Personal Care" <?php if (($_POST['matter'] ?? '') === "POA for Healthcare & Personal Care") echo 'selected'; ?>>POA for Healthcare & Personal Care</option>
-      <option value="Trusts" <?php if (($_POST['matter'] ?? '') === "Trusts") echo 'selected'; ?>>Trusts</option>
-    </select><br><br>
+      <option value="" disabled selected>-- Please Select --</option>
+      <option value="Last Will & Testament Preparation">Last Will & Testament Preparation</option>
+      <option value="Grant of Administration Preparation">Grant of Administration Preparation</option>
+      <option value="Grant of Probate Preparation">Grant of Probate Preparation</option>
+      <option value="POA for Financial & Legal Matters">POA for Financial & Legal Matters</option>
+      <option value="POA for Healthcare & Personal Care">POA for Healthcare & Personal Care</option>
+      <option value="Trusts">Trusts</option>
+    </select>
 
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" rows="5" required><?php echo htmlspecialchars($_POST['message'] ?? '') ?></textarea><br><br>
+    <label for="message">Message<span aria-hidden="true">*</span>:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
 
     <button type="submit">Send Message</button>
   </form>
@@ -89,3 +143,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </body>
 </html>
+
