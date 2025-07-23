@@ -51,7 +51,6 @@
   background-color: #76b39d;
 }
 
-/* Paragraph below the image */
 .hero-text {
   max-width: 700px;
   margin: 30px auto;
@@ -96,17 +95,21 @@
   }
 }
 
-/* Optional logo sizing for consistency */
+/* Updated Logo Styling */
 .logo {
-  height: 80px;
-  width: auto;
+  height: 160px; /* doubled from 80px */
+  width: 160px; /* maintain circular shape */
+  border-radius: 50%; /* circular */
+  object-fit: cover; /* ensures logo fills the circular area cleanly */
+  background-color: transparent; /* ensures no white block if image has transparency */
+  display: block;
+  margin: 0 auto; /* center if needed */
 }
 </style>
 </head>
 <body>
-<header>
+<header style="text-align: center; padding: 20px 0;">
   <a href="index.html">
-    <!-- Updated logo image -->
     <img src="images/logo2.png" alt="C&J Estate Planning Logo" class="logo" />
   </a>
   <div>
