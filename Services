@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services | C&J Estate Planning</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background: #e6f2f1;
+      flex-wrap: wrap;
+    }
+    .logo {
+      height: 120px;
+      width: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .header-text {
+      flex: 1;
+      text-align: left;
+      padding-left: 20px;
+    }
+    .header-text h1 {
+      margin: 0;
+    }
+    .header-text p {
+      margin: 0;
+    }
+    nav {
+      width: 100%;
+      text-align: right;
+      background: #e6f2f1;
+      padding: 10px 20px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #3a4a3f;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: white;
+      min-width: 220px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      text-align: left;
+    }
+    .dropdown-content a {
+      display: block;
+      padding: 10px 15px;
+      color: #333;
+      text-decoration: none;
+    }
+    .dropdown-content a:hover {
+      background: #f0f0f0;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .header-text {
+        text-align: center;
+        padding-left: 0;
+      }
+      nav {
+        text-align: center;
+      }
+    }
+    main.container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 30px 25px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(58,74,63,0.15);
+      color: #3a4a3f;
+      font-family: Arial, sans-serif;
+    }
+    main.container h2 {
+      color: #2a6f63;
+      margin-bottom: 20px;
+    }
+    main.container ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    main.container ul li {
+      margin-bottom: 12px;
+      font-size: 1.1em;
+    }
+    main.container ul li a {
+      color: #2a6f63;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    main.container ul li a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html">
+    <img src="images/logo2.png" alt="C&J Estate Planning Logo" class="logo" />
+  </a>
+  <div class="header-text">
+    <h1>C&J Estate Planning Consultancy</h1>
+    <p>Trustworthy Will & Estate Planning Services</p>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <div class="dropdown">
+    <a href="services.html">Services ▼</a>
+    <div class="dropdown-content">
+      <a href="will-preparation.html">Last Will & Testament Preparation</a>
+      <a href="administration-preparation.html">Grant of Administration Preparation</a>
+      <a href="probate-preparation.html">Grant of Probate Preparation</a>
+      <a href="poa-financial.html">POA for Financial & Legal Matters</a>
+      <a href="poa-healthcare.html">POA for Healthcare & Personal Care</a>
+      <a href="trusts.html">Trusts</a>
+    </div>
+  </div>
+  <a href="contact.html">Contact</a>
+  <a href="faq.html">FAQ</a>
+</nav>
+
+<main class="container">
+  <h2>Our Services</h2>
+  <p>Explore the range of estate planning services we provide to protect your legacy.</p>
+
+  <ul>
+    <li><a href="will-preparation.html">Last Will & Testament Preparation</a></li>
+    <li><a href="administration-preparation.html">Grant of Administration Preparation</a></li>
+    <li><a href="probate-preparation.html">Grant of Probate Preparation</a></li>
+    <li><a href="poa-financial.html">POA for Financial & Legal Matters</a></li>
+    <li><a href="poa-healthcare.html">POA for Healthcare & Personal Care</a></li>
+    <li><a href="trusts.html">Trusts</a></li>
+  </ul>
+</main>
+
+<footer style="text-align:center; padding: 20px 0; background:#e6f2f1; margin-top:40px;">
+  &copy; 2025 C&J Estate Planning Consultancy. All rights reserved.
+</footer>
+
+</body>
+</html>
