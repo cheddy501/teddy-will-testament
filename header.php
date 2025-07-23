@@ -1,5 +1,5 @@
 <header style="text-align: center; padding: 20px 0;">
-  <a href="index.html">
+  <a href="index.php">
     <img src="images/logo2.png" alt="C&J Estate Planning Logo" class="logo" />
   </a>
   <div>
@@ -9,19 +9,19 @@
 </header>
 
 <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
+  <a href="index.php">Home</a>
+  <a href="about.php">About</a>
   <div class="dropdown">
     <a href="#">Services</a>
     <div class="dropdown-content">
-      <a href="will-preparation.html">Last Will & Testament Preparation</a>
-      <a href="administration-preparation.html">Grant of Administration Preparation</a>
-      <a href="probate-preparation.html">Grant of Probate Preparation</a>
-      <a href="poa-financial.html">POA for Financial & Legal Matters</a>
-      <a href="poa-healthcare.html">POA for Healthcare & Personal Care</a>
-      <a href="trusts.html">Trusts</a>
+      <a href="will-preparation.php">Last Will & Testament Preparation</a>
+      <a href="administration-preparation.php">Grant of Administration Preparation</a>
+      <a href="probate-preparation.php">Grant of Probate Preparation</a>
+      <a href="poa-financial.php">POA for Financial & Legal Matters</a>
+      <a href="poa-healthcare.php">POA for Healthcare & Personal Care</a>
+      <a href="trusts.php">Trusts</a>
     </div>
   </div>
-  <a href="contact.html">Contact</a>
-  <a href="faq.html">FAQ</a>
+  <a href="contact.php">Contact</a>
+  <a href="faq.php">FAQ</a>
 </nav>
