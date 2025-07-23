@@ -1,6 +1,3 @@
-<?php
-// index.php
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -99,17 +96,51 @@
   display: block;
   margin: 0 auto;
 }
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+header .logo {
+  height: 120px;
+  width: 120px;
+}
+nav {
+  text-align: center;
+  margin-top: 10px;
+}
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #3a4a3f;
+  font-weight: 600;
+}
+nav a:hover {
+  text-decoration: underline;
+}
 </style>
 </head>
 <body>
 
-<?php include 'header.php'; ?>
+<header>
+  <a href="index.html">
+    <img src="images/logo2.png" alt="C&J Estate Planning Logo" class="logo" />
+  </a>
+  <h1>C&J Estate Planning Consultancy</h1>
+  <p>Trustworthy Will & Estate Planning Services</p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
+</header>
 
 <!-- Hero Banner with heading + button centered -->
 <section class="hero-banner">
   <div class="hero-content">
     Securing Your Legacy for Generations
-    <a href="contact.php" class="cta-button">Book a Free Consultation</a>
+    <a href="contact.html" class="cta-button">Book a Free Consultation</a>
   </div>
 </section>
 
@@ -127,7 +158,7 @@
   </p>
 </div>
 
-<footer>
+<footer style="text-align:center; padding: 20px 0; background:#e6f2f1; margin-top:40px;">
   &copy; 2025 C&J Estate Planning Consultancy. All rights reserved.
 </footer>
 
