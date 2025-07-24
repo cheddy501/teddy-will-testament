@@ -4,58 +4,122 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Probate Preparation | C&J Estate Planning</title>
+
+<!-- Playfair Display font for headings -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="css/style.css" />
+
 <style>
-  /* Header and container styling */
-  header {
-    text-align: center;
-    padding: 20px 0;
-  }
-  header .logo {
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0 auto 10px;
-    display: block;
-  }
-  nav {
-    text-align: center;
-    margin-top: 10px;
-  }
-  nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #3a4a3f;
-    font-weight: 600;
-  }
-  nav a:hover {
-    text-decoration: underline;
-  }
-  .container {
-    max-width: 900px;
-    background: #ffffff;
-    margin: 30px auto;
-    padding: 30px 25px;
-    border-radius: 10px;
-    box-shadow: 0 0 12px rgba(58,74,63,0.15);
-    color: #3a4a3f;
-  }
-  .container h2 {
-    margin-bottom: 15px;
-    color: #2a6f63;
-  }
-  .container p {
-    font-size: 1.1em;
-    line-height: 1.6;
-  }
-  footer {
-    text-align: center;
-    padding: 20px 0;
-    background: #e6f2f1;
-    margin-top: 40px;
-    font-size: 0.9rem;
-  }
+/* Header and nav styles matching current theme */
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+header .logo {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 10px;
+  display: block;
+}
+nav {
+  text-align: center;
+  margin-top: 10px;
+  position: relative;
+  font-weight: 600;
+}
+
+/* Basic nav links */
+nav > a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #3a4a3f;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+nav > a:hover,
+nav > a:focus {
+  text-decoration: underline;
+  background-color: #e6f2f1;
+  outline: none;
+}
+
+/* Dropdown container */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+/* Dropdown content hidden by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 230px;
+  box-shadow: 0 8px 16px rgba(58,74,63,0.15);
+  border-radius: 6px;
+  padding: 10px 0;
+  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  color: #3a4a3f;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #e6f2f1;
+  text-decoration: underline;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.container {
+  max-width: 900px;
+  background: #ffffff;
+  margin: 30px auto;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(58,74,63,0.15);
+  color: #3a4a3f;
+  font-family: Arial, sans-serif;
+}
+
+.container h2 {
+  margin-bottom: 15px;
+  color: #2a6f63;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.container p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #e6f2f1;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
 </style>
 </head>
 <body>
@@ -64,16 +128,29 @@
   <a href="index.html">
     <img src="images/logo2.png" alt="C&J Estate Planning Logo" class="logo" />
   </a>
-  <h1>C&J Estate Planning Consultancy</h1>
-  <p>Trustworthy Will & Estate Planning Services</p>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-    <a href="faq.html">FAQ</a>
-  </nav>
+  <div>
+    <h1>C&J Estate Planning Consultancy</h1>
+    <p>Trustworthy Will & Estate Planning Services</p>
+  </div>
 </header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <div class="dropdown">
+    <a href="#">Services ▼</a>
+    <div class="dropdown-content">
+      <a href="will-preparation.html">Last Will & Testament Preparation</a>
+      <a href="administration-preparation.html">Grant of Administration Preparation</a>
+      <a href="probate-preparation.html" aria-current="page">Grant of Probate Preparation</a>
+      <a href="poa-financial.html">POA for Financial & Legal Matters</a>
+      <a href="poa-healthcare.html">POA for Healthcare & Personal Care</a>
+      <a href="trusts.html">Trusts</a>
+    </div>
+  </div>
+  <a href="contact.html">Contact</a>
+  <a href="faq.html">FAQ</a>
+</nav>
 
 <div class="container">
   <h2>Grant of Probate Preparation</h2>
@@ -88,3 +165,4 @@
 
 </body>
 </html>
+
