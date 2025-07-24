@@ -6,112 +6,221 @@
 <title>Contact | C&J Estate Planning</title>
 <link rel="stylesheet" href="css/style.css" />
 <style>
-  /* Basic styles for the form and page */
-  body {
-    font-family: Arial, sans-serif;
-    background: #f7f9f8;
-    color: #3a4a3f;
-    margin: 0;
-    padding: 0;
-  }
+  /* Override or add page-specific styles here */
+
+  /* Header */
   header {
-    background: #e6f2f1;
-    padding: 20px 0;
-    text-align: center;
-  }
-  .logo {
-    height: 120px;
-    border-radius: 50%;
-  }
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0;
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    align-items: center;
+    background-color: #2a6f63;
+    padding: 20px 40px;
+    gap: 20px;
+    color: #d9f0e1;
+    flex-wrap: wrap;
   }
-  nav ul li a {
+  header a.logo-link {
+    display: block;
+  }
+  header img.logo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+  }
+  header div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+  header p {
+    margin: 4px 0 0;
+    font-size: 1.1em;
+    font-style: italic;
+  }
+
+  /* Navigation */
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #4a7c59;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    padding-right: 40px;
+  }
+  nav a,
+  nav .dropdown > a {
+    color: #d9f0e1;
+    padding: 15px 22px;
     text-decoration: none;
-    color: #3a4a3f;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
   }
-  nav ul li a[aria-current="page"] {
-    text-decoration: underline;
+  nav a:hover,
+  nav .dropdown:hover > a {
+    background-color: #76b39d;
   }
+  .dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #4a7c59;
+    flex-direction: column;
+    min-width: 220px;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 10;
+    top: 100%;
+    left: 0;
+  }
+  .dropdown-content a {
+    padding: 12px 16px;
+    text-align: left;
+    color: #d9f0e1;
+    font-weight: 500;
+    border-bottom: 1px solid #3a5a44;
+    transition: background-color 0.3s ease;
+  }
+  .dropdown-content a:last-child {
+    border-bottom: none;
+  }
+  .dropdown-content a:hover {
+    background-color: #76b39d;
+  }
+  .dropdown:hover .dropdown-content {
+    display: flex;
+  }
+
+  /* Container */
   .container {
     max-width: 600px;
-    background: white;
+    background: #ffffff;
     margin: 40px auto;
-    padding: 30px 20px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(58,74,63,0.15);
+    color: #3a4a3f;
+    font-family: Arial, sans-serif;
   }
-  h2 {
+  .container h2 {
     margin-bottom: 15px;
+    color: #2a6f63;
   }
   label {
     display: block;
     margin-top: 15px;
-    font-weight: bold;
+    font-weight: 600;
   }
   input[type="text"],
   input[type="email"],
   select,
   textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px 15px;
     margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
+    border: 1px solid #a3b09a;
+    border-radius: 6px;
+    font-size: 1em;
+    font-family: inherit;
     box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #2a6f63;
+    outline: none;
   }
   textarea {
     resize: vertical;
   }
   button {
     margin-top: 20px;
-    background-color: #3a4a3f;
-    color: white;
+    background-color: #2a6f63;
+    color: #d9f0e1;
     border: none;
     padding: 12px 20px;
     font-size: 1.1rem;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
+    font-weight: 600;
     transition: background-color 0.3s ease;
   }
   button:hover {
-    background-color: #2f3b33;
+    background-color: #76b39d;
   }
+
+  /* Footer */
   footer {
+    background-color: #2a6f63;
+    color: #d9f0e1;
     text-align: center;
-    padding: 20px 0;
-    background: #e6f2f1;
-    margin-top: 50px;
-    font-size: 0.9rem;
+    padding: 18px 20px;
+    font-size: 0.9em;
+    margin-top: 40px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav {
+      justify-content: center;
+      padding-right: 0;
+    }
+    .container {
+      margin: 20px 15px;
+      padding: 25px 20px;
+    }
   }
 </style>
 </head>
 <body>
 
 <header>
-  <img src="images/logo.png" alt="C&J Estate Planning Logo" class="logo" />
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html" aria-current="page">Contact</a></li>
-    </ul>
-  </nav>
+  <a href="index.html" class="logo-link">
+    <img src="images/logo2.png" alt="C&J Estate Planning Logo" class="logo" />
+  </a>
+  <div>
+    <h1>C&J Estate Planning Consultancy</h1>
+    <p>Trustworthy Will & Estate Planning Services</p>
+  </div>
 </header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <div class="dropdown">
+    <a href="#">Services ▼</a>
+    <div class="dropdown-content">
+      <a href="will-preparation.html">Last Will & Testament Preparation</a>
+      <a href="administration-preparation.html">Grant of Administration Preparation</a>
+      <a href="probate-preparation.html">Grant of Probate Preparation</a>
+      <a href="poa-financial.html">POA for Financial & Legal Matters</a>
+      <a href="poa-healthcare.html">POA for Healthcare & Personal Care</a>
+      <a href="trusts.html">Trusts</a>
+    </div>
+  </div>
+  <a href="contact.html" aria-current="page">Contact</a>
+  <a href="faq.html">FAQ</a>
+</nav>
 
 <div class="container">
   <h2>Contact Us</h2>
   <p>Please reach out for consultations or questions regarding your estate planning needs.</p>
 
-  <!-- Replace the action URL below with your form handler URL or third-party service -->
   <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
     <label for="name">Name<span aria-hidden="true">*</span>:</label>
     <input type="text" id="name" name="name" required autocomplete="name" />
@@ -143,4 +252,5 @@
 
 </body>
 </html>
+
 
