@@ -23,9 +23,12 @@ header {
   color: #d9f0e1;
 }
 
+/* Updated logo styling */
 header img.logo {
-  max-height: 140px;
-  width: auto;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
   display: block;
 }
 
