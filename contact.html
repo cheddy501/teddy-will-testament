@@ -6,8 +6,6 @@
 <title>Contact | C&J Estate Planning</title>
 <link rel="stylesheet" href="css/style.css" />
 <style>
-  /* Override or add page-specific styles here */
-
   /* Header */
   header {
     display: flex;
@@ -104,18 +102,38 @@
     display: flex;
   }
 
-  /* Container */
-  .container {
-    max-width: 600px;
-    background: #ffffff;
+  /* Contact Layout */
+  .contact-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1000px;
     margin: 40px auto;
-    padding: 30px 25px;
+    padding: 0 20px;
+  }
+  .contact-info-box {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(58,74,63,0.1);
+    padding: 20px;
+    max-width: 300px;
+    flex: 1;
+    font-size: 1em;
+    color: #3a4a3f;
+    line-height: 1.6;
+  }
+  .contact-form-container {
+    background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 0 12px rgba(58,74,63,0.15);
-    color: #3a4a3f;
-    font-family: Arial, sans-serif;
+    padding: 30px 25px;
+    flex: 2;
+    min-width: 280px;
+    max-width: 600px;
   }
-  .container h2 {
+  .contact-form-container h2 {
     margin-bottom: 15px;
     color: #2a6f63;
   }
@@ -180,9 +198,15 @@
       justify-content: center;
       padding-right: 0;
     }
-    .container {
-      margin: 20px 15px;
-      padding: 25px 20px;
+    .contact-flex-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .contact-info-box {
+      max-width: 90%;
+    }
+    .contact-form-container {
+      max-width: 95%;
     }
   }
 </style>
@@ -217,37 +241,40 @@
   <a href="faq.html">FAQ</a>
 </nav>
 
-  
-<div class="container">
-  <h2>Contact Us</h2>
-  <p>Please reach out for consultations or questions regarding your estate planning needs.</p>
+<div class="contact-flex-container">
+  <div class="contact-info-box">
+    <p>
+      Get in touch to see how our consultants can help you preserve your family’s future and help to create a lasting legacy to pass on to future generations. Call us, we're located in the Belize City area at <strong>+(501) 625-8292</strong> or use the contact form below.
+    </p>
+  </div>
 
-  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-    <label for="name">Name<span aria-hidden="true">*</span>:</label>
-    <input type="text" id="name" name="name" required autocomplete="name" />
+  <div class="contact-form-container">
+    <h2>Contact Us</h2>
+    <p>Please reach out for consultations or questions regarding your estate planning needs.</p>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label for="name">Name<span aria-hidden="true">*</span>:</label>
+      <input type="text" id="name" name="name" required autocomplete="name" />
 
-    <label for="email">Email<span aria-hidden="true">*</span>:</label>
-    <input type="email" id="email" name="_replyto" required autocomplete="email" />
+      <label for="email">Email<span aria-hidden="true">*</span>:</label>
+      <input type="email" id="email" name="_replyto" required autocomplete="email" />
 
-    <label for="matter">Type of Matter<span aria-hidden="true">*</span>:</label>
-    <select id="matter" name="matter" required>
-      <option value="" disabled selected>-- Please Select --</option>
-      <option value="Last Will & Testament Preparation">Last Will & Testament Preparation</option>
-      <option value="Grant of Administration Preparation">Grant of Administration Preparation</option>
-      <option value="Grant of Probate Preparation">Grant of Probate Preparation</option>
-      <option value="POA for Financial & Legal Matters">POA for Financial & Legal Matters</option>
-      <option value="POA for Healthcare & Personal Care">POA for Healthcare & Personal Care</option>
-      <option value="Trusts">Trusts</option>
-    </select>
+      <label for="matter">Type of Matter<span aria-hidden="true">*</span>:</label>
+      <select id="matter" name="matter" required>
+        <option value="" disabled selected>-- Please Select --</option>
+        <option value="Last Will & Testament Preparation">Last Will & Testament Preparation</option>
+        <option value="Grant of Administration Preparation">Grant of Administration Preparation</option>
+        <option value="Grant of Probate Preparation">Grant of Probate Preparation</option>
+        <option value="POA for Financial & Legal Matters">POA for Financial & Legal Matters</option>
+        <option value="POA for Healthcare & Personal Care">POA for Healthcare & Personal Care</option>
+        <option value="Trusts">Trusts</option>
+      </select>
 
-    <P>
-Get in touch to see how our consultants can help you preserve your family’s future and help to create a lasting legacy to pass on to future generations. Call us, where located in the Belize City area at +(501)625-8292 or use the contact form below.
-</P>
-    <label for="message">Message<span aria-hidden="true">*</span>:</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
+      <label for="message">Message<span aria-hidden="true">*</span>:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
 
-    <button type="submit">Send Message</button>
-  </form>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
 </div>
 
 <footer>
