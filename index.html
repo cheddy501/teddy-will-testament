@@ -9,6 +9,53 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/style.css" />
+
+<!-- Inline style for hero banner fallback if style.css fails -->
+<style>
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background: url('images/grandparents-sunset-banner.png') center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.hero-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    color: #fff;
+    max-width: 700px;
+    z-index: 2;
+    padding: 0 15px;
+}
+.hero-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.4em;
+    color: #ffffff;
+    line-height: 1.2;
+}
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 1.8em;
+    }
+}
+.logo {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+</style>
 </head>
 <body>
 
@@ -62,23 +109,5 @@
   &copy; 2025 C&J Estate Planning Consultancy. All rights reserved.
 </footer>
 
-<!-- Inline style to apply Playfair Display only to hero headline -->
-<style>
-.hero-content h2 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 2.4em;
-    color: #ffffff;
-    line-height: 1.2;
-}
-
-@media (max-width: 768px) {
-    .hero-content h2 {
-        font-size: 1.8em;
-    }
-}
-</style>
-
 </body>
 </html>
-
