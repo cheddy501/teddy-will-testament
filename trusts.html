@@ -23,19 +23,67 @@ header .logo {
     margin: 0 auto 10px;
     display: block;
 }
+
+/* Navigation styles */
 nav {
     text-align: center;
     margin-top: 10px;
+    position: relative;
+    font-weight: 600;
 }
-nav a {
+nav > a {
     margin: 0 15px;
     text-decoration: none;
     color: #3a4a3f;
-    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
 }
-nav a:hover {
+nav > a:hover, nav > a:focus {
     text-decoration: underline;
 }
+
+/* Dropdown container */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+/* Dropdown content hidden by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 230px;
+    box-shadow: 0 8px 16px rgba(58,74,63,0.15);
+    border-radius: 6px;
+    padding: 10px 0;
+    z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    color: #3a4a3f;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Hover effect on dropdown links */
+.dropdown-content a:hover {
+    background-color: #e6f2f1;
+    text-decoration: underline;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 .container {
     max-width: 900px;
     background: #ffffff;
@@ -49,6 +97,8 @@ nav a:hover {
 .container h2 {
     margin-bottom: 15px;
     color: #2a6f63;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
 }
 .container p {
     font-size: 1.1em;
@@ -69,16 +119,29 @@ footer {
   <a href="index.html">
     <img src="images/logo2.png" alt="C&J Estate Planning Logo" class="logo" />
   </a>
-  <h1>C&J Estate Planning Consultancy</h1>
-  <p>Trustworthy Will & Estate Planning Services</p>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-    <a href="faq.html">FAQ</a>
-  </nav>
+  <div>
+    <h1>C&J Estate Planning Consultancy</h1>
+    <p>Trustworthy Will & Estate Planning Services</p>
+  </div>
 </header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <div class="dropdown">
+    <a href="#">Services ▼</a>
+    <div class="dropdown-content">
+      <a href="will-preparation.html">Last Will & Testament Preparation</a>
+      <a href="administration-preparation.html">Grant of Administration Preparation</a>
+      <a href="probate-preparation.html">Grant of Probate Preparation</a>
+      <a href="poa-financial.html">POA for Financial & Legal Matters</a>
+      <a href="poa-healthcare.html">POA for Healthcare & Personal Care</a>
+      <a href="trusts.html" aria-current="page">Trusts</a>
+    </div>
+  </div>
+  <a href="contact.html">Contact</a>
+  <a href="faq.html">FAQ</a>
+</nav>
 
 <div class="container">
   <h2>Trusts</h2>
@@ -87,13 +150,13 @@ footer {
   </p>
   <p>
     Trusts can help you:
-    <ul>
-      <li>Protect your assets from creditors and unnecessary taxation.</li>
-      <li>Provide for loved ones with clear, enforceable instructions.</li>
-      <li>Maintain privacy over your estate distribution.</li>
-      <li>Manage assets for minors or beneficiaries who need guidance in handling inheritance.</li>
-    </ul>
   </p>
+  <ul>
+    <li>Protect your assets from creditors and unnecessary taxation.</li>
+    <li>Provide for loved ones with clear, enforceable instructions.</li>
+    <li>Maintain privacy over your estate distribution.</li>
+    <li>Manage assets for minors or beneficiaries who need guidance in handling inheritance.</li>
+  </ul>
   <p>
     Our experienced team is ready to provide personalized guidance on the types of trusts available in Belize, ensuring your assets are managed according to your plans while offering peace of mind for you and your family. Contact us today to learn how a trust can strengthen your estate planning.
   </p>
@@ -105,6 +168,7 @@ footer {
 
 </body>
 </html>
+
 
 
 
