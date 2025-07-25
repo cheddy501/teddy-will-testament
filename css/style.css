@@ -190,8 +190,9 @@ nav a:focus,
   line-height: 1.5;
 }
 
-/* General CTA Button (no arrow) */
-.cta-button {
+/* CTA Buttons (Hero & Menu) */
+.cta-button,
+.cta-consultation {
   background-color: #2a6f63;
   color: #d9f0e1;
   padding: 10px 20px;
@@ -202,49 +203,9 @@ nav a:focus,
   display: inline-block;
 }
 
-.cta-button:hover {
-  background-color: #76b39d;
-}
-
-/* Free Consultation Button with Arrow */
-.cta-consultation {
-  background-color: #2a6f63;
-  color: #d9f0e1;
-  padding: 10px 32px 10px 20px; /* extra right padding for arrow */
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  display: inline-block;
-  position: relative;
-}
-
+.cta-button:hover,
 .cta-consultation:hover {
   background-color: #76b39d;
-}
-
-/* Arrow styling on consultation button only */
-.cta-consultation::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 16px;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 2px;
-  background-color: #d9f0e1;
-}
-
-.cta-consultation::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%) rotate(45deg);
-  width: 6px;
-  height: 6px;
-  border-top: 2px solid #d9f0e1;
-  border-right: 2px solid #d9f0e1;
 }
 
 /* Forms */
