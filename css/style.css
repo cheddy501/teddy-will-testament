@@ -208,6 +208,27 @@ nav a:focus,
   background-color: #76b39d;
 }
 
+/* Call Us and Phone Number Styling */
+.call-us {
+  color: #d9f0e1;
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-right: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  user-select: none;
+}
+
+.phone-number {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.3em;
+  margin-top: 4px;
+  user-select: text;
+}
+
 /* Forms */
 form {
   max-width: 500px;
