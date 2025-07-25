@@ -8,7 +8,7 @@
 /* Body */
 body {
   font-family: Arial, sans-serif;
-  background: #d8eae6; /* Slightly darker for contrast while keeping green tint */
+  background: #d8eae6;
   color: #3a4a3f;
   line-height: 1.6;
 }
@@ -23,7 +23,6 @@ header {
   color: #d9f0e1;
 }
 
-/* Updated logo styling */
 header img.logo {
   width: 140px;
   height: 140px;
@@ -72,14 +71,12 @@ nav a,
   transition: background-color 0.3s ease;
 }
 
-/* Highlight active/current page link */
 nav a[aria-current="page"],
 .dropdown-content a[aria-current="page"] {
   background-color: #76b39d;
   font-weight: 700;
 }
 
-/* Hover/focus states */
 nav a:hover,
 nav a:focus,
 .dropdown:hover > a {
@@ -87,14 +84,12 @@ nav a:focus,
   outline: none;
 }
 
-/* Dropdown container */
 .dropdown {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-/* Dropdown content hidden by default */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -107,43 +102,7 @@ nav a:focus,
   top: 100%;
   left: 0;
 }
-.contact-flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 30px;
-  margin-top: 30px;
-}
 
-.contact-info-box {
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(58, 74, 63, 0.1);
-  padding: 18px;
-  max-width: 300px;
-  flex: 1;
-  font-size: 1em;
-  color: #3a4a3f;
-  line-height: 1.6;
-}
-
-.contact-form-container {
-  flex: 2;
-  min-width: 280px;
-}
-
-@media (max-width: 768px) {
-  .contact-flex-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .contact-info-box {
-    max-width: 90%;
-  }
-}
-
-/* Dropdown links */
 .dropdown-content a {
   padding: 12px 16px;
   text-align: left;
@@ -161,10 +120,8 @@ nav a:focus,
 .dropdown-content a:hover,
 .dropdown-content a:focus {
   background-color: #76b39d;
-  outline: none;
 }
 
-/* Show dropdown on hover */
 .dropdown:hover .dropdown-content,
 .dropdown:focus-within .dropdown-content {
   display: flex;
@@ -233,36 +190,61 @@ nav a:focus,
   line-height: 1.5;
 }
 
-/* CTA Button with longer arrow */
+/* General CTA Button (no arrow) */
 .cta-button {
   background-color: #2a6f63;
   color: #d9f0e1;
-  padding: 8px 24px 8px 16px; /* more right padding for arrow */
+  padding: 10px 20px;
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
   transition: background-color 0.3s ease;
   display: inline-block;
-  position: relative; /* for arrow positioning */
 }
 
 .cta-button:hover {
   background-color: #76b39d;
 }
 
-.cta-button::after {
+/* Free Consultation Button with Arrow */
+.cta-consultation {
+  background-color: #2a6f63;
+  color: #d9f0e1;
+  padding: 10px 32px 10px 20px; /* extra right padding for arrow */
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.cta-consultation:hover {
+  background-color: #76b39d;
+}
+
+/* Arrow styling on consultation button only */
+.cta-consultation::after {
   content: "";
   position: absolute;
   top: 50%;
-  right: 12px;
+  right: 16px;
   transform: translateY(-50%);
-  width: 18px;  /* length of the tail */
+  width: 20px;
   height: 2px;
-  background-color: #d9f0e1; /* line color */
-  box-shadow:
-    20px 0 0 #d9f0e1,  /* extend line */
-    22px -6px 0 #d9f0e1, /* arrowhead upper */
-    22px 6px 0 #d9f0e1;  /* arrowhead lower */
+  background-color: #d9f0e1;
+}
+
+.cta-consultation::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%) rotate(45deg);
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #d9f0e1;
+  border-right: 2px solid #d9f0e1;
 }
 
 /* Forms */
@@ -346,4 +328,3 @@ footer {
     border-radius: 0;
   }
 }
-
