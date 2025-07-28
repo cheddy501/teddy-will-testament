@@ -13,7 +13,7 @@ body {
   line-height: 1.6;
 }
 
-/* Header with logo */
+/* Header */
 header {
   display: flex;
   align-items: center;
@@ -169,12 +169,15 @@ nav a:focus,
   width: 40px;
   height: 40px;
   object-fit: contain;
+  max-width: 40px;
+  max-height: 40px;
 }
 
+/* Title & Description */
 .service-box h3 {
   font-size: 16px;
   font-weight: bold;
-  margin-top: 40px;
+  margin-top: 45px;
   margin-bottom: 8px;
 }
 
@@ -226,7 +229,7 @@ nav a:focus,
   line-height: 1.5;
 }
 
-/* CTA Buttons */
+/* Buttons */
 .cta-button,
 .cta-consultation {
   background-color: #2a6f63;
@@ -244,7 +247,7 @@ nav a:focus,
   background-color: #76b39d;
 }
 
-/* Call Us and Phone Number Styling */
+/* Contact and Phone Info */
 .call-us {
   color: #d9f0e1;
   font-weight: 600;
@@ -265,7 +268,7 @@ nav a:focus,
   user-select: text;
 }
 
-/* Forms */
+/* Form Fields */
 form {
   max-width: 500px;
   margin: 20px auto;
@@ -290,7 +293,7 @@ textarea:focus {
   outline: none;
 }
 
-/* Buttons */
+/* Button */
 button {
   background-color: #2a6f63;
   color: #d9f0e1;
