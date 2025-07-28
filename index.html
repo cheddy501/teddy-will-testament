@@ -1,129 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Index | C&J Estate Planning</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Index | C&J Estate Planning</title>
 
-<!-- Playfair Display Font for hero headline -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Playfair Display Font for hero headline -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 
-<!-- Inline style for hero banner fallback if style.css fails -->
-<style>
-.hero-banner {
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    background: url('images/grandparents-sunset-banner.png') center center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-.hero-banner::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-}
-.hero-content {
-    position: relative;
-    color: #fff;
-    max-width: 700px;
-    z-index: 2;
-    padding: 0 15px;
-}
-.hero-content h2 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 2.4em;
-    color: #ffffff;
-    line-height: 1.2;
-}
-@media (max-width: 768px) {
-    .hero-content h2 {
-        font-size: 1.8em;
+  <!-- Inline style for hero banner and service boxes -->
+  <style>
+    .hero-banner {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      background: url('images/grandparents-sunset-banner.png') center center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
-}
-.logo {
-    height: 140px;
-    width: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-}
-.call-us {
-    color: #d9f0e1;
-    font-weight: 600;
-    padding: 12px 18px;
-    text-align: center;
-    line-height: 1.4;
-}
-</style>
+    .hero-banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      color: #fff;
+      max-width: 700px;
+      z-index: 2;
+      padding: 0 15px;
+    }
+    .hero-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 2.4em;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+    @media (max-width: 768px) {
+      .hero-content h2 {
+        font-size: 1.8em;
+      }
+    }
+    .logo {
+      height: 140px;
+      width: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+    }
+    .call-us {
+      color: #d9f0e1;
+      font-weight: 600;
+      padding: 12px 18px;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    /* Services Boxes Styling */
+    .services-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .service-box {
+      background-color: #f5f5f5;
+      border: 2px solid #3a4a3f;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 12px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .service-box a {
+      text-decoration: none;
+      color: #3a4a3f;
+      display: block;
+    }
+
+    .service-box:hover {
+      background-color: #d8eae6;
+      transform: translateY(-5px);
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <a href="index.html">
-    <img src="images/logo2.png" alt="C&J Estate Planning Logo" class="logo" />
-  </a>
-  <div>
-    <h1>C&J Estate Planning Consultancy</h1>
-    <p>Trustworthy Will & Estate Planning Services</p>
-  </div>
-</header>
-
-<nav>
-  <a href="index.html" aria-current="page">Home</a>
-  <a href="about.html">About</a>
-  <div class="dropdown">
-    <a href="#">Services ▼</a>
-    <div class="dropdown-content">
-      <a href="will-preparation.html">Last Will & Testament Preparation</a>
-      <a href="administration-preparation.html">Grant of Administration Preparation</a>
-      <a href="probate-preparation.html">Grant of Probate Preparation</a>
-      <a href="poa-financial.html">POA for Financial & Legal Matters</a>
-      <a href="poa-healthcare.html">POA for Healthcare & Personal Care</a>
-      <a href="trusts.html">Trusts</a>
+  <header>
+    <a href="index.html">
+      <img src="images/logo2.png" alt="C&J Estate Planning Logo" class="logo" />
+    </a>
+    <div>
+      <h1>C&J Estate Planning Consultancy</h1>
+      <p>Trustworthy Will & Estate Planning Services</p>
     </div>
+  </header>
+
+  <nav>
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="about.html">About</a>
+    <div class="dropdown">
+      <a href="#">Services ▼</a>
+      <div class="dropdown-content">
+        <a href="will-preparation.html">Last Will & Testament Preparation</a>
+        <a href="administration-preparation.html">Grant of Administration Preparation</a>
+        <a href="probate-preparation.html">Grant of Probate Preparation</a>
+        <a href="poa-financial.html">POA for Financial & Legal Matters</a>
+        <a href="poa-healthcare.html">POA for Healthcare & Personal Care</a>
+        <a href="trusts.html">Trusts</a>
+      </div>
+    </div>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
+
+    <!-- Call Us section -->
+    <span class="call-us">
+      Call Us:<br>
+      (501) 625-8292
+    </span>
+
+    <!-- Consultation Button -->
+    <a href="contact.html" class="cta-button">Get a Free Consultation</a>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="hero-banner">
+    <div class="hero-content">
+      <h2>Securing Your Legacy for Generations in Belize</h2>
+      <p>We help you protect your family’s future with clear, personalized estate planning.</p>
+      <a href="contact.html" class="cta-button">Get Assistance</a>
+    </div>
+  </section>
+
+  <!-- Main content container -->
+  <div class="container">
+    <h2>Welcome to C&J Estate Planning</h2>
+    <p>Your trusted partner for Will & Estate Planning services in Belize and beyond.</p>
+    <p>
+      At C&J Estate Planning Consultancy, we help you secure your legacy and protect your loved ones with clear, personalized estate planning. We specialize in preparing Last Will and Testaments, facilitating Grants of Probate and Grants of Administration, and setting up trusts and powers of attorney. Our experienced team simplifies the process, ensuring your assets are managed and distributed according to your wishes, giving you and your family peace of mind for the future.
+    </p>
   </div>
-  <a href="contact.html">Contact</a>
-  <a href="faq.html">FAQ</a>
 
-  <!-- Added Call Us section -->
-  <span class="call-us">
-    Call Us:<br>
-    (501) 625-8292
-  </span>
+  <!-- Services Boxes -->
+  <section class="services-boxes">
+    <div class="service-box"><a href="will-preparation.html">Last Will & Testament</a></div>
+    <div class="service-box"><a href="administration-preparation.html">Grant of Administration</a></div>
+    <div class="service-box"><a href="probate-preparation.html">Grant of Probate</a></div>
+    <div class="service-box"><a href="poa-financial.html">POA - Financial & Legal</a></div>
+    <div class="service-box"><a href="poa-healthcare.html">POA - Healthcare & Personal</a></div>
+    <div class="service-box"><a href="trusts.html">Trusts</a></div>
+  </section>
 
-  <!-- Consultation Button -->
-  <a href="contact.html" class="cta-button">Get a Free Consultation</a>
-</nav>
-
-<!-- Hero Banner -->
-<section class="hero-banner">
-  <div class="hero-content">
-    <h2>Securing Your Legacy for Generations in Belize</h2>
-    <p>We help you protect your family’s future with clear, personalized estate planning.</p>
-    <a href="contact.html" class="cta-button">Get Assistance</a>
-  </div>
-</section>
-
-<!-- Main content container -->
-<div class="container">
-  <h2>Welcome to C&J Estate Planning</h2>
-  <p>Your trusted partner for Will & Estate Planning services in Belize and beyond.</p>
-  <p>
-    At C&J Estate Planning Consultancy, we help you secure your legacy and protect your loved ones with clear, personalized estate planning. We specialize in preparing Last Will and Testaments, facilitating Grants of Probate and Grants of Administration, and setting up trusts and powers of attorney. Our experienced team simplifies the process, ensuring your assets are managed and distributed according to your wishes, giving you and your family peace of mind for the future.
-  </p>
-</div>
-
-<footer>
-  &copy; 2025 C&J Estate Planning Consultancy. All rights reserved.
-</footer>
+  <footer>
+    &copy; 2025 C&J Estate Planning Consultancy. All rights reserved.
+  </footer>
 
 </body>
 </html>
