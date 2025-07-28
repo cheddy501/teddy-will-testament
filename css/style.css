@@ -22,29 +22,23 @@ header {
   gap: 20px;
   color: #d9f0e1;
 }
-
 header img.logo {
   width: 140px;
   height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  display: block;
 }
-
 header div {
   display: flex;
   flex-direction: column;
 }
-
 header h1 {
-  margin: 0;
   font-size: 2em;
 }
-
 header p {
-  margin: 4px 0 0;
   font-size: 1.1em;
   font-style: italic;
+  margin-top: 4px;
 }
 
 /* Navigation */
@@ -57,7 +51,6 @@ nav {
   gap: 12px;
   padding-right: 40px;
 }
-
 nav a,
 .dropdown > a {
   color: #d9f0e1;
@@ -65,31 +58,18 @@ nav a,
   text-decoration: none;
   display: flex;
   align-items: center;
-  cursor: pointer;
   font-weight: 600;
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
-
-nav a[aria-current="page"],
-.dropdown-content a[aria-current="page"] {
-  background-color: #76b39d;
-  font-weight: 700;
-}
-
 nav a:hover,
-nav a:focus,
-.dropdown:hover > a {
+.dropdown > a:hover,
+nav a:focus {
   background-color: #76b39d;
-  outline: none;
 }
-
 .dropdown {
   position: relative;
-  display: flex;
-  align-items: center;
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -98,140 +78,21 @@ nav a:focus,
   min-width: 220px;
   border-radius: 0 0 6px 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  z-index: 10;
   top: 100%;
-  left: 0;
 }
-
 .dropdown-content a {
   padding: 12px 16px;
-  text-align: left;
+  border-bottom: 1px solid #3a5a44;
   color: #d9f0e1;
   font-weight: 500;
-  border-bottom: 1px solid #3a5a44;
-  transition: background-color 0.3s ease;
   white-space: nowrap;
 }
-
 .dropdown-content a:last-child {
   border-bottom: none;
 }
-
-.dropdown-content a:hover,
-.dropdown-content a:focus {
-  background-color: #76b39d;
-}
-
 .dropdown:hover .dropdown-content,
 .dropdown:focus-within .dropdown-content {
   display: flex;
-}
-
-/* Container */
-.container {
-  max-width: 1000px;
-  background: #ffffff;
-  margin: 30px auto;
-  padding: 30px 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(58,74,63,0.15);
-  color: #3a4a3f;
-}
-
-/* Service Box Grid */
-.service-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-/* Individual Service Box */
-.service-box {
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-  padding: 10px 12px;
-  border-radius: 10px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
-  text-align: left;
-  position: relative;
-  transition: transform 0.2s;
-  width: 300px;
-  height: 80px;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.service-box:hover {
-  transform: translateY(-4px);
-}
-
-.service-box img {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  max-width: 40px;
-  max-height: 40px;
-}
-
-/* Title & Description */
-.service-box h3 {
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-
-.service-box p {
-  font-size: 12px;
-  color: #444;
-  line-height: 1.2;
-}
-
-/* Hero Banner */
-.hero-banner {
-  position: relative;
-  width: 100%;
-  height: 60vh;
-  background: url('images/grandparents-sunset-banner.png') center center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
-.hero-banner::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  color: #fff;
-  max-width: 700px;
-  z-index: 2;
-  padding: 0 15px;
-}
-
-.hero-content h2 {
-  font-size: 2.4em;
-  margin-bottom: 15px;
-  line-height: 1.2;
-}
-
-.hero-content p {
-  font-size: 1.3em;
-  margin-bottom: 25px;
-  line-height: 1.5;
 }
 
 /* Buttons */
@@ -244,75 +105,108 @@ nav a:focus,
   font-weight: bold;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-  display: inline-block;
 }
-
 .cta-button:hover,
 .cta-consultation:hover {
   background-color: #76b39d;
 }
 
-/* Contact and Phone Info */
-.call-us {
-  color: #d9f0e1;
-  font-weight: 600;
-  font-size: 1.1em;
-  margin-right: 15px;
-  text-align: center;
+/* Hero Banner */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background: url('../images/grandparents-sunset-banner.png') center/cover no-repeat;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  user-select: none;
+  text-align: center;
 }
-
-.phone-number {
-  color: #ffffff;
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  max-width: 700px;
+  padding: 0 15px;
+}
+.hero-content h2 {
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
+  font-size: 2.4em;
+  line-height: 1.2;
+}
+.hero-content p {
   font-size: 1.3em;
-  margin-top: 4px;
-  user-select: text;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 1.8em;
+  }
 }
 
-/* Form Fields */
-form {
-  max-width: 500px;
-  margin: 20px auto;
+/* Container */
+.container {
+  max-width: 1000px;
+  background: #ffffff;
+  margin: 30px auto;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(58,74,63,0.15);
+}
+
+/* Services Grid & Boxes */
+.services-grid {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px;
 }
 
-input,
-textarea {
-  padding: 12px 15px;
-  margin-bottom: 15px;
-  border: 1px solid #a3b09a;
-  border-radius: 6px;
-  font-size: 1em;
-  font-family: inherit;
-  transition: border-color 0.3s ease;
+.service-box {
+  width: 300px;
+  height: 80px;
+  background-color: #f5f5f5;
+  border: 2px solid #3a4a3f;
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+.service-box:hover {
+  background-color: #d8eae6;
+  transform: translateY(-4px);
 }
 
-input:focus,
-textarea:focus {
-  border-color: #2a6f63;
-  outline: none;
+.service-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
 }
 
-/* Button */
-button {
-  background-color: #2a6f63;
-  color: #d9f0e1;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 1em;
-  transition: background-color 0.3s ease;
+.service-text h3 {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #3a4a3f;
 }
-
-button:hover {
-  background-color: #76b39d;
+.service-text p {
+  font-size: 12px;
+  line-height: 1.2;
+  color: #3a4a3f;
 }
 
 /* Footer */
@@ -322,41 +216,26 @@ footer {
   text-align: center;
   padding: 18px 20px;
   font-size: 0.9em;
-  margin-top: 40px;
   border-radius: 0 0 10px 10px;
+  margin-top: 40px;
 }
 
-/* Responsive */
+/* Responsive Fallback */
 @media (max-width: 600px) {
-  .hero-banner {
-    height: 40vh;
+  .service-box {
+    width: 100%;
   }
-
-  .hero-content h2 {
-    font-size: 1.8em;
-  }
-
-  .hero-content p {
-    font-size: 1.1em;
-  }
-
   nav {
     flex-direction: column;
   }
-
   nav a, .dropdown > a {
-    padding: 12px 15px;
+    padding: 12px;
     width: 100%;
     justify-content: center;
   }
-
   .dropdown-content {
     position: static;
     box-shadow: none;
     border-radius: 0;
-  }
-
-  .service-box {
-    width: 100%;
   }
 }
