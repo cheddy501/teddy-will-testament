@@ -322,7 +322,7 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 50px) {
   .hero-banner {
     height: 40vh;
   }
@@ -334,7 +334,7 @@ footer {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 50px) {
   nav {
     flex-direction: column;
   }
@@ -366,13 +366,13 @@ footer {
 }
 
 /* Responsive icon sizing */
-@media (max-width: 768px) {
+@media (max-width: 50px) {
   .service-box img.service-icon {
     width: 28px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 50px) {
   .service-box img.service-icon {
     width: 24px;
   }
