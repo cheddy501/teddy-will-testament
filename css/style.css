@@ -5,97 +5,186 @@
   padding: 0;
 }
 
-/* Global styles */
+/* Body */
 body {
   font-family: 'Times New Roman', serif;
-  background: #f7f7f7;
-  color: #222;
+  background: #d8eae6;
+  color: #3a4a3f;
   line-height: 1.6;
-  padding: 0;
-  margin: 0;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Header */
+/* Header with logo */
 header {
-  text-align: center;
-  padding: 20px 0;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  background-color: #2a6f63;
+  padding: 20px 40px;
+  gap: 20px;
+  color: #d9f0e1;
 }
 
-.logo {
-  height: 140px;
+header img.logo {
   width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
+  display: block;
+}
+
+header div {
+  display: flex;
+  flex-direction: column;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+header p {
+  margin: 4px 0 0;
+  font-size: 1.1em;
+  font-style: italic;
 }
 
 /* Navigation */
 nav {
-  background-color: #ffffff;
   display: flex;
+  justify-content: flex-end;
+  background-color: #4a7c59;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  gap: 15px;
-  padding: 10px 20px;
-  border-bottom: 1px solid #ddd;
+  gap: 12px;
+  padding-right: 40px;
 }
 
-nav a {
-  color: #222;
-  padding: 8px 16px;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-nav a:hover {
-  background-color: #eaeaea;
+nav a,
+.dropdown > a {
+  color: #d9f0e1;
+  padding: 15px 22px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
   border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a[aria-current="page"],
+.dropdown-content a[aria-current="page"] {
+  background-color: #76b39d;
+  font-weight: 700;
+}
+
+nav a:hover,
+nav a:focus,
+.dropdown:hover > a {
+  background-color: #76b39d;
+  outline: none;
 }
 
 .dropdown {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #4a7c59;
+  flex-direction: column;
   min-width: 220px;
-  z-index: 1000;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 10;
+  top: 100%;
+  left: 0;
 }
 
 .dropdown-content a {
-  display: block;
-  padding: 10px 15px;
-  color: #222;
+  padding: 12px 16px;
+  text-align: left;
+  color: #d9f0e1;
+  font-weight: 500;
+  border-bottom: 1px solid #3a5a44;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
 }
 
-.cta-button {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 16px;
-  border-radius: 5px;
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover,
+.dropdown-content a:focus {
+  background-color: #76b39d;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: flex;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  background: #ffffff;
+  margin: 30px auto;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(58,74,63,0.15);
+  color: #3a4a3f;
+}
+
+/* Service Box Grid */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.service-box {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 20px 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+  text-align: left;
+  position: relative;
+  transition: transform 0.2s;
+  min-height: 180px;
+}
+
+.service-box:hover {
+  transform: translateY(-4px);
+}
+
+.service-box img {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.service-box h3 {
+  font-size: 16px;
   font-weight: bold;
-  transition: background 0.3s;
+  margin-top: 40px;
+  margin-bottom: 8px;
 }
 
-.cta-button:hover {
-  background-color: #111;
+.service-box p {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.4;
 }
 
-/* Hero banner */
+/* Hero Banner */
 .hero-banner {
   position: relative;
   width: 100%;
@@ -105,6 +194,8 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .hero-banner::after {
@@ -124,81 +215,134 @@ nav a:hover {
 }
 
 .hero-content h2 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
   font-size: 2.4em;
-  color: #ffffff;
+  margin-bottom: 15px;
   line-height: 1.2;
 }
 
-@media (max-width: 768px) {
-  .hero-content h2 {
-    font-size: 1.8em;
-  }
+.hero-content p {
+  font-size: 1.3em;
+  margin-bottom: 25px;
+  line-height: 1.5;
 }
 
-/* Services Grid */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  padding: 50px 20px;
-  background-color: #f7f7f7;
-}
-
-/* Service Box */
-.service-box {
-  position: relative;
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 25px 20px 30px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease-in-out;
-  overflow: hidden;
-  font-family: 'Times New Roman', serif;
-}
-
-.service-box:hover {
-  transform: translateY(-5px);
-}
-
-/* Service Icon */
-.service-icon {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
-
-/* Text in Boxes */
-.service-box h3 {
-  font-size: 20px;
+/* CTA Buttons */
+.cta-button,
+.cta-consultation {
+  background-color: #2a6f63;
+  color: #d9f0e1;
+  padding: 10px 20px;
+  text-decoration: none;
   font-weight: bold;
-  margin-top: 40px;
-  margin-bottom: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
 }
 
-.service-box p {
-  font-size: 15px;
-  color: #444;
+.cta-button:hover,
+.cta-consultation:hover {
+  background-color: #76b39d;
 }
 
-/* Clickable Overlay */
-.overlay-link {
-  position: absolute;
-  inset: 0;
-  z-index: 5;
+/* Call Us and Phone Number Styling */
+.call-us {
+  color: #d9f0e1;
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-right: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  user-select: none;
+}
+
+.phone-number {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.3em;
+  margin-top: 4px;
+  user-select: text;
+}
+
+/* Forms */
+form {
+  max-width: 500px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #a3b09a;
+  border-radius: 6px;
+  font-size: 1em;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #2a6f63;
+  outline: none;
+}
+
+/* Buttons */
+button {
+  background-color: #2a6f63;
+  color: #d9f0e1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #76b39d;
 }
 
 /* Footer */
 footer {
-  background-color: #f0f0f0;
+  background-color: #2a6f63;
+  color: #d9f0e1;
   text-align: center;
-  padding: 20px;
+  padding: 18px 20px;
+  font-size: 0.9em;
   margin-top: 40px;
-  font-size: 14px;
-  color: #777;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 40vh;
+  }
+  .hero-content h2 {
+    font-size: 1.8em;
+  }
+  .hero-content p {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+  nav a, .dropdown > a {
+    padding: 12px 15px;
+    width: 100%;
+    justify-content: center;
+  }
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+  }
 }
