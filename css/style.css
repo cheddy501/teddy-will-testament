@@ -348,4 +348,35 @@ footer {
     box-shadow: none;
     border-radius: 0;
   }
+
+.service-box img.service-icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 35px;
+  height: auto;
+  object-fit: contain;
+  z-index: 2;
+}
+
+/* Optional: service box adjustments */
+.service-box {
+  position: relative;
+  padding-top: 50px; /* make space for the icon */
+}
+
+/* Responsive icon sizing */
+@media (max-width: 768px) {
+  .service-box img.service-icon {
+    width: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-box img.service-icon {
+    width: 24px;
+  }
+}
+
+  
 }
