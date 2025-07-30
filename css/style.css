@@ -138,15 +138,16 @@ nav a:focus,
   color: #3a4a3f;
 }
 
-/* Service Box Grid */
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Width increased */
-  gap: 10px;
-  margin-top: 30px;
+/* Services Grid (updated) */
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 2rem;
 }
 
-/* Individual Service Box */
+/* Service Box (updated size) */
 .service-box {
   background-color: #ffffff;
   border: 1px solid #ccc;
@@ -157,7 +158,8 @@ nav a:focus,
   position: relative;
   transition: transform 0.2s;
   min-height: 80px;
-  width: 150px; /* Width increased */
+  width: 175px;
+  margin: 12px;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -325,28 +327,39 @@ footer {
   border-radius: 0 0 10px 10px;
 }
 
-/* Responsive */
-@media (max-width: 50px) {
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .services-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-box {
+    width: 90%;
+  }
+
   .hero-banner {
     height: 40vh;
   }
+
   .hero-content h2 {
     font-size: 1.8em;
   }
+
   .hero-content p {
     font-size: 1.1em;
   }
-}
 
-@media (max-width: 50px) {
   nav {
     flex-direction: column;
   }
+
   nav a, .dropdown > a {
     padding: 12px 15px;
     width: 100%;
     justify-content: center;
   }
+
   .dropdown-content {
     position: static;
     box-shadow: none;
@@ -354,25 +367,7 @@ footer {
   }
 
   .service-box img.service-icon {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    width: 35px;
-    height: auto;
-    object-fit: contain;
-    z-index: 2;
-  }
-
-  .service-box {
-    position: relative;
-    padding-top: 50px;
-  }
-
-  .service-box img.service-icon {
-    width: 28px;
-  }
-
-  .service-box img.service-icon {
     width: 24px;
   }
 }
+
