@@ -8,8 +8,8 @@
 /* Global Styles */
 body {
   font-family: 'Playfair Display', serif;
-  background: #f7f7f7;
-  color: #333;
+  background: #f5f1eb; /* soft warm cream */
+  color: #3a4a3f; /* deep forest green */
   line-height: 1.6;
 }
 
@@ -18,8 +18,8 @@ header {
   display: flex;
   align-items: center;
   padding: 15px 30px;
-  background: #e0f0eb;
-  border-bottom: 1px solid #ccc;
+  background: #d0cab2; /* light taupe */
+  border-bottom: 1px solid #a8bfa0; /* sage green border */
 }
 
 .logo {
@@ -29,11 +29,12 @@ header {
 
 header h1 {
   font-size: 1.8em;
+  color: #3a4a3f;
 }
 
 header p {
   font-size: 1em;
-  color: #555;
+  color: #5c6b58; /* softer green */
 }
 
 /* Navigation */
@@ -42,30 +43,35 @@ nav {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: #3a4a3f;
+  background-color: #a8bfa0; /* sage green */
   padding: 15px 30px;
-  color: #fff;
+  color: #f5f1eb; /* cream text */
   position: relative;
   z-index: 10;
 }
 
 nav a {
-  color: #fff;
+  color: #f5f1eb;
   text-decoration: none;
   margin: 5px 15px;
   font-size: 1rem;
 }
 
 nav a.cta-button {
-  background: #4CAF50;
-  color: #fff;
+  background: #5c6b58; /* deeper olive */
+  color: #f5f1eb;
   padding: 8px 16px;
   border-radius: 4px;
   margin-left: auto;
+  transition: background-color 0.3s ease;
+}
+
+nav a.cta-button:hover {
+  background: #496241; /* darker olive hover */
 }
 
 nav .call-us {
-  color: #fff;
+  color: #f5f1eb;
   font-size: 0.9em;
   margin-left: 20px;
 }
@@ -77,21 +83,21 @@ nav .call-us {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #3a4a3f;
+  background-color: #5c6b58; /* deep olive */
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   z-index: 999;
   top: 100%;
   left: 0;
   min-width: 200px;
+  border-radius: 4px;
 }
 
 .dropdown-content a {
   display: block;
   padding: 10px;
-  color: #fff;
+  color: #f5f1eb;
 }
 
-/* 👇 Keeps submenu open while hovering */
 .dropdown:hover .dropdown-content,
 .dropdown-content:hover {
   display: block;
@@ -112,10 +118,11 @@ nav .call-us {
 
 .hero-content {
   position: relative;
-  color: #fff;
+  color: #f5f1eb;
   z-index: 2;
   max-width: 700px;
   padding: 20px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
 }
 
 .hero-content h2 {
@@ -129,13 +136,18 @@ nav .call-us {
 }
 
 .hero-content .cta-button {
-  background: #4CAF50;
-  color: white;
+  background: #5c6b58;
+  color: #f5f1eb;
   padding: 10px 18px;
   font-size: 1em;
   border: none;
   border-radius: 4px;
   text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-content .cta-button:hover {
+  background: #496241;
 }
 
 /* Container */
@@ -144,6 +156,7 @@ nav .call-us {
   margin: 40px auto;
   padding: 0 20px;
   text-align: center;
+  color: #3a4a3f;
 }
 
 .container h2 {
@@ -163,9 +176,9 @@ nav .call-us {
 }
 
 .service-box {
-  background: white;
+  background: #f5f1eb;
   border-radius: 8px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  box-shadow: 0 0 12px rgba(58, 74, 63, 0.1);
   overflow: hidden;
   position: relative;
   flex: 1 1 280px;
@@ -173,10 +186,12 @@ nav .call-us {
   transition: transform 0.3s;
   padding: 20px;
   text-align: center;
+  color: #3a4a3f;
 }
 
 .service-box:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(73, 98, 65, 0.3);
 }
 
 .service-icon {
@@ -207,7 +222,7 @@ footer {
   text-align: center;
   padding: 20px;
   background-color: #3a4a3f;
-  color: white;
+  color: #f5f1eb;
   margin-top: 40px;
   font-size: 0.9em;
 }
