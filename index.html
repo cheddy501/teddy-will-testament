@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Index | C&J Estate Planning</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -22,28 +22,30 @@
   <nav>
     <a href="index.html" aria-current="page">Home</a>
     <a href="about.html">About</a>
-    <div class="dropdown">
-      <a href="#">Services ▼</a>
-      <div class="dropdown-content">
-        <a href="last-will.html">Last Will & Testament</a>
-        <a href="administration-preparation.html">Grant of Administration</a>
-        <a href="probate-preparation.html">Grant of Probate</a>
-        <a href="poa-financial.html">POA for Financial & Legal Matters</a>
-        <a href="poa-healthcare.html">POA for Medical & Health</a>
-        <a href="trusts.html">Trusts</a>
+
+    <div class="dropdown" role="menu" aria-haspopup="true" aria-expanded="false">
+      <a href="#" aria-haspopup="true" aria-controls="services-menu" aria-expanded="false">Services ▼</a>
+      <div class="dropdown-content" id="services-menu" role="menu">
+        <a href="last-will.html" role="menuitem">Last Will & Testament</a>
+        <a href="administration-preparation.html" role="menuitem">Grant of Administration</a>
+        <a href="probate-preparation.html" role="menuitem">Grant of Probate</a>
+        <a href="poa-financial.html" role="menuitem">POA for Financial & Legal Matters</a>
+        <a href="poa-healthcare.html" role="menuitem">POA for Medical & Health</a>
+        <a href="trusts.html" role="menuitem">Trusts</a>
       </div>
     </div>
+
     <a href="contact.html">Contact</a>
     <a href="faq.html">FAQ</a>
 
     <span class="call-us">
-      Call Us:<br>
+      Call Us:<br />
       (501) 625‑8292
     </span>
+
     <a href="contact.html" class="cta-button">Get a Free Consultation</a>
   </nav>
 
-  <!-- Updated Hero Banner Section -->
   <section class="hero-banner">
     <div class="hero-content">
       <h2>Plan with Peace of Mind</h2>
@@ -60,8 +62,8 @@
 
   <section class="services-grid">
     <div class="service-box">
-      <img src="images/last-will.png" alt="Last Will Icon" class="service-icon">
-      <a href="last-will.html" class="overlay-link"></a>
+      <img src="images/last-will.png" alt="Last Will Icon" class="service-icon" />
+      <a href="last-will.html" class="overlay-link" aria-label="Last Will & Testament"></a>
       <div class="service-text">
         <h3>Last Will & Testament</h3>
         <p>Ensure your final wishes are legally protected.</p>
@@ -69,8 +71,8 @@
     </div>
 
     <div class="service-box">
-      <img src="images/power-of-attorney.png" alt="Power of Attorney Icon" class="service-icon">
-      <a href="poa-financial.html" class="overlay-link"></a>
+      <img src="images/power-of-attorney.png" alt="Power of Attorney Icon" class="service-icon" />
+      <a href="poa-financial.html" class="overlay-link" aria-label="Power of Attorney for Legal Matters"></a>
       <div class="service-text">
         <h3>Power of Attorney for Legal Matters</h3>
         <p>Assign someone you trust to handle financial/legal decisions.</p>
@@ -78,8 +80,8 @@
     </div>
 
     <div class="service-box">
-      <img src="images/grant-of-probate.png" alt="Grant of Probate Icon" class="service-icon">
-      <a href="grant-of-probate.html" class="overlay-link"></a>
+      <img src="images/grant-of-probate.png" alt="Grant of Probate Icon" class="service-icon" />
+      <a href="grant-of-probate.html" class="overlay-link" aria-label="Grant of Probate"></a>
       <div class="service-text">
         <h3>Grant of Probate</h3>
         <p>Manage a deceased person’s estate legally.</p>
@@ -87,8 +89,8 @@
     </div>
 
     <div class="service-box">
-      <img src="images/letter-of-administration.png" alt="Letter of Administration Icon" class="service-icon">
-      <a href="letter-of-administration.html" class="overlay-link"></a>
+      <img src="images/letter-of-administration.png" alt="Letter of Administration Icon" class="service-icon" />
+      <a href="letter-of-administration.html" class="overlay-link" aria-label="Letter of Administration"></a>
       <div class="service-text">
         <h3>Letter of Administration</h3>
         <p>Apply to handle a deceased estate without a will.</p>
@@ -96,8 +98,8 @@
     </div>
 
     <div class="service-box">
-      <img src="images/trust-setup.png" alt="Trust Setup Icon" class="service-icon">
-      <a href="trust-setup.html" class="overlay-link"></a>
+      <img src="images/trust-setup.png" alt="Trust Setup Icon" class="service-icon" />
+      <a href="trust-setup.html" class="overlay-link" aria-label="Trust Setup"></a>
       <div class="service-text">
         <h3>Trust Setup</h3>
         <p>Protect and manage assets for future security.</p>
@@ -105,8 +107,8 @@
     </div>
 
     <div class="service-box">
-      <img src="images/power-of-attorney.png" alt="Power of Attorney Icon" class="service-icon">
-      <a href="poa-healthcare.html" class="overlay-link"></a>
+      <img src="images/power-of-attorney.png" alt="Power of Attorney Icon" class="service-icon" />
+      <a href="poa-healthcare.html" class="overlay-link" aria-label="POA for Medical & Health"></a>
       <div class="service-text">
         <h3>POA for Medical & Health</h3>
         <p>Plan for your medical and personal care decisions.</p>
