@@ -19,17 +19,17 @@ header {
   align-items: center;
   padding: 15px 30px;
   background: #d0cab2; /* light taupe */
-  border-bottom: 1px solid #a8bfa0; /* sage green border */
+  border-bottom: 1px solid #b7cfb4; /* updated brighter green */
 }
 
 .logo {
-  width: 120px;
-  height: 120px;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
   object-fit: cover;
   margin-right: 20px;
-  border: 2px solid #ffffff; /* Optional: white border */
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow */
+  border: 6px solid #ffffff; /* thicker white border for ring */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow */
 }
 
 header h1 {
@@ -39,7 +39,7 @@ header h1 {
 
 header p {
   font-size: 1em;
-  color: #5c6b58; /* softer green */
+  color: #5c6b58;
 }
 
 /* Navigation */
@@ -48,9 +48,9 @@ nav {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: #a8bfa0; /* sage green */
+  background-color: #b7cfb4; /* brighter sage green */
   padding: 15px 30px;
-  color: #f5f1eb; /* cream text */
+  color: #f5f1eb;
   position: relative;
   z-index: 10;
 }
@@ -63,7 +63,7 @@ nav a {
 }
 
 nav a.cta-button {
-  background: #5c6b58; /* deeper olive */
+  background: #6ca56c; /* updated olive green */
   color: #f5f1eb;
   padding: 8px 16px;
   border-radius: 4px;
@@ -72,7 +72,7 @@ nav a.cta-button {
 }
 
 nav a.cta-button:hover {
-  background: #496241; /* darker olive hover */
+  background: #5fa35f; /* hover state brighter */
 }
 
 nav .call-us {
@@ -88,7 +88,7 @@ nav .call-us {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #5c6b58; /* deep olive */
+  background-color: #6ca56c; /* updated green */
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   z-index: 999;
   top: 100%;
@@ -141,7 +141,7 @@ nav .call-us {
 }
 
 .hero-content .cta-button {
-  background: #5c6b58;
+  background: #6ca56c;
   color: #f5f1eb;
   padding: 10px 18px;
   font-size: 1em;
@@ -152,7 +152,7 @@ nav .call-us {
 }
 
 .hero-content .cta-button:hover {
-  background: #496241;
+  background: #5fa35f;
 }
 
 /* Container */
