@@ -23,12 +23,12 @@ header {
 }
 
 .logo {
-  width: 240px;
-  height: 240px;
+  width: 175px;
+  height: 175px;
   border-radius: 50%;
   object-fit: cover;
   margin-right: 20px;
-  border: 6px solid #ffffff; /* thicker white border for ring */
+  border: 6px solid #b7cfb4; /* thicker green border for ring */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow */
 }
 
