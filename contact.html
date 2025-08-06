@@ -1,10 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Contact | C&J Estate Planning</title>
-<link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | C&J Estate Planning</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Contact Page Specific Styles */
+    .contact-flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .contact-info-box {
+      flex: 1 1 300px;
+      background: #f5f1eb;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(58, 74, 63, 0.1);
+      color: #3a4a3f;
+      font-size: 1em;
+    }
+
+    .contact-form-container {
+      flex: 1 1 400px;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 14px rgba(58, 74, 63, 0.12);
+    }
+
+    .contact-form-container h2 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      color: #3a4a3f;
+    }
+
+    .contact-form-container p {
+      margin-bottom: 20px;
+      color: #5c6b58;
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #3a4a3f;
+    }
+
+    form input,
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+      background-color: #fdfdfb;
+      color: #3a4a3f;
+    }
+
+    form input:focus,
+    form textarea:focus,
+    form select:focus {
+      outline: none;
+      border-color: #b7cfb4;
+      box-shadow: 0 0 5px rgba(183, 207, 180, 0.6);
+    }
+
+    form button {
+      background-color: #6ca56c;
+      color: #f5f1eb;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #5fa35f;
+    }
+
+    @media (max-width: 768px) {
+      .contact-flex-container {
+        flex-direction: column;
+        padding: 0 15px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -35,57 +127,4 @@
   <a href="contact.html" aria-current="page">Contact</a>
   <a href="faq.html">FAQ</a>
 
-  <!-- Phone number beside FAQ -->
-  <span class="call-us">
-    Call Us:<br>(501) 625-8292
-  </span>
-
-  <!-- Book a Free Consultation Button -->
-  <a href="contact.html" class="cta-button">Get a Free Consultation</a>
-</nav>
-
-<div class="contact-flex-container">
-  <div class="contact-info-box">
-    <p>
-      Get in touch to see how our consultants can help you preserve your family’s future and help to create a lasting legacy to pass on to future generations. Call us at <strong>+(501) 625-8292</strong> or use the contact form below.
-    </p>
-  </div>
-
-  <div class="contact-form-container">
-    <h2>Contact Us</h2>
-    <p>Please reach out for consultations or questions regarding your estate planning needs.</p>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <label for="name">Name<span aria-hidden="true">*</span>:</label>
-      <input type="text" id="name" name="name" required autocomplete="name" />
-
-      <label for="email">Email<span aria-hidden="true">*</span>:</label>
-      <input type="email" id="email" name="_replyto" required autocomplete="email" />
-
-      <label for="cell-phone">Cell Phone<span aria-hidden="true">*</span>:</label>
-<input type="tel" id="cell-phone" name="cell-phone" required placeholder="(501) 123-4567" />
-
-      <label for="matter">Type of Matter<span aria-hidden="true">*</span>:</label>
-      <select id="matter" name="matter" required>
-        <option value="" disabled selected>-- Please Select --</option>
-        <option value="Last Will & Testament Preparation">Last Will & Testament Preparation</option>
-        <option value="Grant of Administration Preparation">Grant of Administration Preparation</option>
-        <option value="Grant of Probate Preparation">Grant of Probate Preparation</option>
-        <option value="POA for Financial & Legal Matters">POA for Financial & Legal Matters</option>
-        <option value="POA for Healthcare & Personal Care">POA for Healthcare & Personal Care</option>
-        <option value="Trusts">Trusts</option>
-      </select>
-
-      <label for="message">Message<span aria-hidden="true">*</span>:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-</div>
-
-<footer>
-  &copy; 2025 C&J Estate Planning Consultancy. All rights reserved.
-</footer>
-
-</body>
-</html>
+  <span class="call-us">Call
